@@ -1,5 +1,7 @@
 html{
     background-color: lavender;
+    overflow: hidden;
+    overflow-y: auto;
 }
 #accordeonWrapper{
     position: center;
@@ -78,6 +80,7 @@ details{
     align-items: center;
     font-size: 1.3em;
     border-bottom: 0.1rem solid gray;
+    transition: width 2s ease-in-out;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 0;
@@ -95,15 +98,10 @@ details{
     transition: height 1s ease-in-out;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    height: 100%;
     width: inherit;
 }
 #accordeonWrapper label:hover article img{
-    transition: height 2s ease-in-out;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    height: 100%;
-    width: inherit;
+    width: 100%;
 }
 
 #accordeonWrapper input{
@@ -117,15 +115,14 @@ details{
     align-items: center;
     justify-items: center;
     overflow: hidden;
-    height: 0;
     z-index: 10;
     margin: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 article img {
-    transition: height 1s ease-in-out;
-    height: 0;
+    transition: width 1s ease-in-out;
+    width: 0;
 }
 
 
@@ -136,7 +133,7 @@ article img {
 }
 
 .memeWrapper input:checked ~ label article img {
-    height: 100%;
+    width: 100%;
 }
 
 #accordeonWrapper input:checked ~ label svg
@@ -155,8 +152,10 @@ svg{
 #accordeonWrapper:hover svg{
     display: unset;
 }
-.memeWrapper:hover{
-    cursor: zoom-in;
+img:hover{
+    cursor: crosshair;
+    transform: scale(102%);
+    transition-duration: 0.8s;
 }
 
 
