@@ -1,0 +1,102 @@
+html{
+    background-color: lavender;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#accordeonWrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    align-content: start;
+    padding-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: -2%;
+}
+
+#accordeonWrapper h1{
+    align-self: start;
+}
+details{
+    transition-duration: 1s;
+}
+
+#accordeonWrapper label div{
+    margin: auto;
+    z-index: 20;
+    height: 15%;
+    cursor: pointer;
+    color: #777;
+    padding-top: 0.5rem;
+    display: flex;
+    align-self: start;
+    align-items: center;
+    border-bottom: 0.1rem solid gray;
+    transition: width 2s ease-in-out;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0;
+    text-align: initial;
+    background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+}
+
+#accordeonWrapper input{
+    display: none;
+}
+#accordeonWrapper article{
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    z-index: 10;
+    margin: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+article img {
+    transition: width 1s ease-in-out;
+    width: 0;
+}
+
+#accordeonWrapper input:checked ~ label article {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: fit-content;
+}
+
+.memeWrapper input:checked ~ label article img {
+    width: 100%;
+}
+
+#accordeonWrapper input:checked ~ label svg
+{
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+    transform-origin: 25% 25% 0;
+}
+img{
+    overflow: auto;
+    opacity: 100%;
+}
+svg{
+    margin-bottom: -4%;
+    transition-duration: 0.5s;
+    transform-origin: 25% 25% 0;
+}
+
+img:active{
+    opacity: 90%;
+}
+
+
+
+
+
+
+
+
+
