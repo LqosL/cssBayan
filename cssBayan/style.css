@@ -1,10 +1,9 @@
 html{
     background-color: lavender;
     overflow: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 #accordeonWrapper{
-    position: center;
     display: flex;
     flex-direction: column;
     background-color: lavender;
@@ -14,9 +13,7 @@ html{
     margin-right: 25%;
     margin-top: -2%;
 }
-#accordeonWrapper:hover{
-    cursor: pointer;
-}
+
 #accordeonWrapper h1{
     align-self: start;
 }
@@ -24,61 +21,16 @@ details{
     transition-duration: 1s;
 }
 
-/*.memeText{*/
-/*    display: flex;*/
-/*    align-self: start;*/
-/*    font-size: 26px;*/
-/*    font-weight: bold;*/
-/*    border-bottom: 1px solid gray;*/
-/*    margin-bottom: 5px;*/
-/*    width: 100%;*/
-/*    justify-content: space-between;*/
-/*    text-align: center;*/
-/*}*/
-/*.memeImg{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    overflow: hidden;*/
-/*    align-self: start;*/
-/*    align-content: center;*/
-/*}*/
-
-/*#accordeonWrapper label{*/
-/*    margin: auto;*/
-/*    position: relative;*/
-/*    z-index: 20;*/
-/*    height: 15%;*/
-/*    cursor: pointer;*/
-/*    color: #777;*/
-/*    line-height: 2rem;*/
-/*    padding-top: 0.5rem;*/
-/*    display: flex;*/
-/*    align-self: start;*/
-/*    align-items: center;*/
-/*    font-size: 1.3em;*/
-/*    border-bottom: 0.1rem solid gray;*/
-/*    width: 100%;*/
-/*    justify-content: space-between;*/
-
-/*    margin-bottom: 0;*/
-/*    text-align: initial;*/
-/*    background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);*/
-/*    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );*/
-/*}*/
-
 #accordeonWrapper label div{
     margin: auto;
-    position: relative;
     z-index: 20;
     height: 15%;
     cursor: pointer;
     color: #777;
-    line-height: 2rem;
     padding-top: 0.5rem;
     display: flex;
     align-self: start;
     align-items: center;
-    font-size: 1.3em;
     border-bottom: 0.1rem solid gray;
     transition: width 2s ease-in-out;
     width: 100%;
@@ -87,21 +39,6 @@ details{
     text-align: initial;
     background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
-}
-
-#accordeonWrapper label div:hover {
-    background: #fff;
-}
-
-
-#accordeonWrapper label:hover article {
-    transition: height 1s ease-in-out;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    width: inherit;
-}
-#accordeonWrapper label:hover article img{
-    width: 100%;
 }
 
 #accordeonWrapper input{
@@ -125,7 +62,6 @@ article img {
     width: 0;
 }
 
-
 #accordeonWrapper input:checked ~ label article {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -140,22 +76,20 @@ article img {
 {
     transform: rotate(45deg);
     transition-duration: 0.5s;
+    transform-origin: 25% 25% 0;
 }
 img{
     overflow: auto;
+    opacity: 100%;
 }
 svg{
-    display: none;
     margin-bottom: -4%;
+    transition-duration: 0.5s;
+    transform-origin: 25% 25% 0;
 }
 
-#accordeonWrapper:hover svg{
-    display: unset;
-}
-img:hover{
-    cursor: crosshair;
-    transform: scale(102%);
-    transition-duration: 0.8s;
+img:active{
+    opacity: 90%;
 }
 
 
