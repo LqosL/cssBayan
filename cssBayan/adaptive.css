@@ -28,8 +28,22 @@
         display: none;
     }
 }
+@media (min-width:1920px) {
+    .memeWrapper div {
+        font-size: 2rem;
+    }
 
-@media (min-width:821px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    #accordeonWrapper {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+}
+
+@media (min-width:821px) and (max-width: 1919px){
     .memeWrapper div {
         font-size: 1.8rem;
     }
